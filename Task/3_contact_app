@@ -1,0 +1,31 @@
+
+void main(){
+   Contact contact1=Contact();
+   contact1.setName="Maisarah";
+   contact1.setPhoneNumber="0182360634";
+   String name1=contact1.getName;
+   String phone1=contact1.getPhoneNumber;
+  
+
+   print(name1);
+   
+}
+
+class Contact{
+    late String name;
+    late String phoneNumber;
+    
+     
+    String get getName => this.name;
+    String get getPhoneNumber => this.phoneNumber;
+
+    set setName(String _name){
+        this.name=_name;
+    }
+
+    set setPhoneNumber (String _phoneNumber){
+        this.phoneNumber=_phoneNumber;
+    }
+     
+    
+}

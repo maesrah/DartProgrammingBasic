@@ -1,0 +1,40 @@
+import 'dart:io';
+
+class Contact {
+  String _name; // Private field
+  String _phoneNumber; // Private field
+
+  Contact(this._name, this._phoneNumber);
+
+  // Getter for name
+  String get name => _name;
+
+  // Setter for name
+  set name(String newName) {
+    _name = newName;
+  }
+
+  // Getter for phoneNumber
+  String get phoneNumber => _phoneNumber;
+
+  // Setter for phoneNumber
+  set phoneNumber(String newPhoneNumber) {
+    _phoneNumber = newPhoneNumber;
+  }
+
+  @override
+  String toString() {
+    return 'Name: $_name, Phone: $_phoneNumber';
+  }
+}
+
+void main() {
+  Contact contact1 = Contact("Maisarah", "0182360634");
+
+  print(contact1.toString());
+
+  // Using getters and setters
+  print('Old Name: ${contact1.name}');
+  contact1.name = "New Name";
+  print('New Name: ${contact1.name}');
+}
